@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#This script will set up Java, Spark, and pyspark on a fresh Jetstream instance.
+
 #-----------------------------------------------------------------------------#
 #                                                                             #
 # JetStream-Spark-Install.sh                                                  #

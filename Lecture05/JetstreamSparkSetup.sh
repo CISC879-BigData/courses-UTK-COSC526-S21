@@ -1,3 +1,5 @@
+#A script to complete setup of a VM using the Jetstream image with pre-installed Spark.
+
 # Define SPARK_HOME and add to PATH
 echo 'export SPARK_HOME=/usr/local/spark' >> ~/.bashrc
 echo 'export PATH=$SPARK_HOME/bin:$PATH' >> ~/.bashrc
