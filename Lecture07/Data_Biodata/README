@@ -1,0 +1,21 @@
+From Sean McAllister:
+
+Example for how to analyze this data:
+1.     Normalize read data to gene length and total read count (sum of entire column).
+2.     Option: Normalize to constitutive gene expression (list of gene_ids).
+3.     Calculate fold changes between time points.
+        a.     Make a matrix of all comparisons.
+        b.     Example: If PreFe = A, T2 = B, T12 = C, T42 = D
+                i.     Stepwise forward in time.
+                        1.     Compare B/A, C/B, D/C
+                ii.     Skipping steps
+                        1.     Compare B/A, C/A, D/A
+4.     Multiply for multivariate (multiple changes in expression state over time)
+5.     Cluster genes with similar fold changes. Evaluate cluster significance.
+6.     Optimize tolerance for fold-change significance criteria. Visualize number of clusters vs. cluster fold-change standard deviation/error.
+7.     Expectation for operons (genes in sequence) to cluster together.
+8.     Output
+        a.     Graph of how change in fold-change significance cut off affects STDEV and number of clusters.
+        b.     Clusters at different time points (mono-variate), and clusters considering time points in series (multi-variate). Compare differences.
+        c.     Visualization of what is in each cluster. E.G. by COG or KO category.
+
